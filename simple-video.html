@@ -19,7 +19,8 @@
     <div class="wrapper">
       <h2>Video Example</h2>
       <div class="video-wrapper">
-        <video width="852" height="480" class="mejs__player">
+        <!-- taking out the media player class -->
+        <video width="852" height="480">
           <source src="http://treehouse-code-samples.s3.amazonaws.com/html-video-and-audio/bridge.mp4" type="video/mp4" />
           <!-- with our source tag, we can put two types of files for differt browser support -->
           <source src="http://treehouse-code-samples.s3.amazonaws.com/html-video-and-audio/bridge.ogg" type="video/ogg" />
@@ -28,10 +29,19 @@
       </div>
       <h2>Audio Example</h2>
       <div class="audio-wrapper">
-        <audio class="mejs__player">
+        <audio>
           <source src="http://treehouse-code-samples.s3.amazonaws.com/html-video-and-audio/bridge-audio.mp3" type="audio/mp3" />
         </audio>
       </div>
     </div>
+    <script>
+      // this will modify the player
+      $("video, audio").mediaelementplayer({
+        // this will show what controls that there will be left to right
+        features: ["playpause", "tracks", "progress"],
+        // this will put a default for our captioning
+        startLanguage: "en",
+      });
+    </script>
   </body>
 </html>
