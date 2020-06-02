@@ -7,6 +7,10 @@
 
     <link rel="stylesheet" href="css/normalize.css" />
     <link href="http://fonts.googleapis.com/css?family=Nunito:400,300" rel="stylesheet" type="text/css" />
+
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="js/mediaelement-and-player.min.js"></script>
+    <link href="css/mediaelementplayer.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
@@ -14,17 +18,20 @@
 
     <div class="wrapper">
       <h2>Video Example</h2>
-
-      <video controls>
-        <source src="http://treehouse-code-samples.s3.amazonaws.com/html-video-and-audio/bridge.mp4" type="video/mp4" />
-        <!-- with our source tag, we can put two types of files for differt browser support -->
-        <source src="http://treehouse-code-samples.s3.amazonaws.com/html-video-and-audio/bridge.ogg" type="video/ogg" />
-        <track label="english" kind="subtitles" srclang="en" src="bridge-captions.vtt" default />
-      </video>
+      <div class="video-wrapper">
+        <video width="852" height="480" class="mejs__player">
+          <source src="http://treehouse-code-samples.s3.amazonaws.com/html-video-and-audio/bridge.mp4" type="video/mp4" />
+          <!-- with our source tag, we can put two types of files for differt browser support -->
+          <source src="http://treehouse-code-samples.s3.amazonaws.com/html-video-and-audio/bridge.ogg" type="video/ogg" />
+          <track label="english" kind="subtitles" srclang="en" src="bridge-captions.vtt" />
+        </video>
+      </div>
       <h2>Audio Example</h2>
-      <audio controls>
-        <source src="http://treehouse-code-samples.s3.amazonaws.com/html-video-and-audio/bridge-audio.mp3" type="audio/mp3" />
-      </audio>
+      <div class="audio-wrapper">
+        <audio class="mejs__player">
+          <source src="http://treehouse-code-samples.s3.amazonaws.com/html-video-and-audio/bridge-audio.mp3" type="audio/mp3" />
+        </audio>
+      </div>
     </div>
   </body>
 </html>

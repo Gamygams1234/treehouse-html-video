@@ -26,9 +26,9 @@ h2 {
 }
 
 /*  styling the video and audio elements */
-video,
-audio,
-.mejs-treehouse {
+.video-wrapper,
+.audio-wrapper {
+  display: flex;
+  justify-content: center;
   margin: 0 auto;
-  display: block;
 }
